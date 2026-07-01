@@ -1,0 +1,296 @@
+/* 
+   NAUTILUS ULTIMATE - EXPANDIDO & PREMIUM 
+   Atividade Prática - Aula 34 (Versão Final)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-dark: #000000;
+    --bg-card: #1c1c1e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #86868b;
+    --accent: #0071e3;
+    --glass: rgba(0, 0, 0, 0.7);
+    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.logo-nautilus {
+    width: 28px;
+    height: 28px;
+    fill: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+}
+
+.badge {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 8vw, 100px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    font-size: clamp(18px, 3vw, 28px);
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+/* Game Grid */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.game-card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.game-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.game-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.game-card:hover .game-img img {
+    transform: scale(1.1);
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.game-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* Categorias */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.cat-item {
+    background: #1c1c1e;
+    padding: 30px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.cat-item:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: linear-gradient(135deg, #0071e3 0%, #002e5d 100%);
+    padding: 100px 40px;
+    border-radius: 40px;
+    margin: 100px auto;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.btn-apple {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 80px 20px;
+    background: #000;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-links li:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #444;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .category-grid { grid-template-columns: 1fr 1fr; }
+    .footer-links { flex-direction: column; gap: 40px; }
+}
