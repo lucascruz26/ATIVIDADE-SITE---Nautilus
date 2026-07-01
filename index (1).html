@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautilus Noir - Sombras e Destino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-link">
+                <svg class="logo-nautilus" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50,5 C25,5 5,25 5,50 C5,75 25,95 50,95 C75,95 95,75 95,50 C95,25 75,5 50,5 M50,85 C30,85 15,70 15,50 C15,30 30,15 50,15 C70,15 85,30 85,50 C85,70 70,85 50,85 M50,25 C36,25 25,36 25,50 C25,64 36,75 50,75 C64,75 75,64 75,50 C75,36 64,25 50,25 M50,65 C42,65 35,58 35,50 C35,42 42,35 50,35 C58,35 65,42 65,50 C65,58 58,65 50,65 Z" />
+                </svg>
+                <span>NAUTILUS NOIR</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#arquivo">Arquivo</a></li>
+                    <li><a href="#investigacao">Investigação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section Noir -->
+        <section class="hero fade-in">
+            <div class="hero-content">
+                <h1 class="noir-title">Onde as sombras ganham vida.</h1>
+                <p class="noir-subtitle">Distribuição cinematográfica para almas inquietas.</p>
+                <div class="cta-noir">
+                    <a href="#arquivo" class="btn-noir">Entrar no Arquivo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo de Jogos Noir -->
+        <section id="arquivo" class="fade-in">
+            <h2 class="section-title">Casos Arquivados</h2>
+            <div class="noir-grid">
+                
+                <!-- RDR2 -->
+                <div class="noir-card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="RDR2 Theme">
+                        <div class="vignette"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Red Dead Redemption 2</h3>
+                        <p class="case-tag">Caso #1899</p>
+                        <p class="case-desc">Uma epopeia sobre honra e sobrevivência no crepúsculo do Velho Oeste. O fim de uma era, o início de uma lenda.</p>
+                        <span class="status">DISPONÍVEL</span>
+                    </div>
+                </div>
+
+                <!-- GTA 708080605676 -->
+                <div class="noir-card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80" alt="Cyber Noir">
+                        <div class="vignette"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>GTA 708080605676</h3>
+                        <p class="case-tag">Caso #2099</p>
+                        <p class="case-desc">O caos supremo em uma megalópole que nunca dorme. A simulação definitiva de crime e poder no futuro distante.</p>
+                        <span class="status">EM INVESTIGAÇÃO</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção de Investigação (Sobre) -->
+        <section id="investigacao" class="fade-in">
+            <div class="noir-quote">
+                <blockquote>"Em um mundo de cores brilhantes, nós escolhemos a verdade do preto e branco."</blockquote>
+                <cite>— O Distribuidor</cite>
+            </div>
+            <div class="about-noir">
+                <p>A Nautilus Noir não apenas distribui jogos; nós curamos experiências que desafiam a moralidade e a percepção. Especialistas em narrativas densas e mundos que respiram melancolia.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-noir">
+            <p>© 2026 Nautilus Noir. Alguns segredos devem permanecer enterrados.</p>
+            <div class="footer-sep"></div>
+            <p>Londres | Nova York | Neo-Tokyo</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
